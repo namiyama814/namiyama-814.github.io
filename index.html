@@ -1,167 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ポートフォリオサイト</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta name="description" content="namiyamaのポートフォリオ。Web制作、インタラクティブな作品、学びの記録。">
+  <title>namiyama — Portfolio</title>
+  <link rel="icon" href="アイコン.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="アイコン.png">
 </head>
-
 <body>
-
-  <header class="main section-fade">
-    <div class="hero">
-      <h1 class="title">namiyama</h1>
-      <hr class="line">
-      <p class="catch">
-        ネットの向こうの、リアルを動かす。人間らしさと、つながるデジタルを。
-      </p>
-    </div>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="namiyama home"><span class="brand-mark">n</span><span>namiyama<span class="brand-dot">.</span></span></a>
+    <nav class="desktop-nav" aria-label="メインナビゲーション">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#works">Works</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="header-link" href="https://github.com/namiyama814" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
   </header>
+  <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+    <a href="#about">About</a><a href="#skills">Skills</a><a href="#works">Works</a><a href="#contact">Contact</a>
+  </div>
 
-  <section class="about section-fade">
-
-    <h2 style="text-align:center">About</h2>
-    <p style="text-align:center">
-      namiyamaと申します<br>
-      💻🕵️をやります<br>
-      地球に住んでいます
-    </p>
-  </section>
-
-  <section class="skills section-fade">
-
-    <h2 style="text-align:center">Skills</h2>
-
-    <h3 style="text-align:center">OS</h3>
-
-    <div class="os-card">
-
-      <div class="card" style="width: 18rem;">
-        <img src="ChromeOS.png" alt="ChromeOS" class="card-img-top">
-        <div class="card-body">
-          <h5 class="card-title">ChromeOS</h5>
-          <p class="card-text">二年ほどChromeOSを触っていました。教育現場でしか使えないゴミです</p>
-          <a href="https://chromeos.google/intl/ja_jp/" class="btn btn-primary" target="_blank">公式ページ</a>
-        </div>
+  <main id="top">
+    <section class="hero section-grid">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="status-dot"></span> Digital maker / Japan</p>
+        <h1>ネットの向こうの、<br><em>リアル</em>を動かす。</h1>
+        <p class="hero-lead">人間らしさと、つながるデジタルを。<br>小さな好奇心から、使いたくなる体験をつくっています。</p>
+        <div class="hero-actions"><a class="button button-dark" href="#works">作品を見る <span>↓</span></a><a class="text-link" href="#about">私について <span>→</span></a></div>
       </div>
-
-      <div class="card" style="width: 18rem;">
-        <img src="WindowsOS.png" alt="WindowsOS" class="card-img-top">
-        <div class="card-body">
-          <h5 class="card-title">WindowsOS</h5>
-          <p class="card-text">メイン利用です。巷で言われているほどゴミではないと思うよ<br> </p>
-          <a href="https://www.microsoft.com/ja-jp/windows?r=1" class="btn btn-primary" target="_blank">公式ページ</a>
-        </div>
+      <div class="hero-art reveal delay-1" aria-label="抽象的なグラフィック" role="img">
+        <div class="orb orb-one"></div><div class="orb orb-two"></div><div class="orb orb-three"></div>
+        <div class="art-label label-top">CURIOUS<br>BY DEFAULT</div><div class="art-label label-bottom">01 / 04</div>
+        <svg class="orbit orbit-one" viewBox="0 0 500 500" aria-hidden="true"><ellipse cx="250" cy="250" rx="205" ry="80"></ellipse><ellipse cx="250" cy="250" rx="205" ry="80" transform="rotate(60 250 250)"></ellipse><ellipse cx="250" cy="250" rx="205" ry="80" transform="rotate(120 250 250)"></ellipse></svg>
+        <div class="plus plus-one">+</div><div class="plus plus-two">+</div>
       </div>
+      <div class="scroll-note"><span class="scroll-line"></span> SCROLL TO EXPLORE</div>
+    </section>
 
-    </div>
-  </section>
+    <section id="about" class="about section section-grid">
+      <div class="section-kicker reveal"><span>01</span><span>About me</span></div>
+      <div class="about-content reveal delay-1"><p class="section-intro">こんにちは、<strong>namiyama</strong>です。</p><p>Webを中心に、コードとアイデアで「ちょっと楽しい」を形にしています。完成したものだけでなく、試行錯誤のプロセスも大切にしながら、触れた人の記憶に残るデジタル体験を目指しています。</p><div class="about-meta"><div><span class="meta-label">BASED IN</span><strong>Japan / Earth</strong></div><div><span class="meta-label">FOCUS</span><strong>Web &amp; Creative</strong></div><div><span class="meta-label">STATUS</span><strong class="available">● Learning &amp; making</strong></div></div></div>
+      <div class="about-stamp reveal delay-2"><span>KEEP<br>MAKING</span><span class="stamp-arrow">↘</span></div>
+    </section>
 
-  <section class="lang">
-    <h3 style="text-align:center">Languages</h3>
-
-    <div class="lang-card">
-      <div class="card" style="width: 18rem;">
-        <img src="html.png" alt="HTML" class="card-img-top">
-        <div class="card-body">
-          <h5 class="card-title">HTML</h5>
-          <p class="card-text">中二で初めて触りました。1時間で詐欺サイトを作った覚えがある。</p>
-          <a href="https://html.spec.whatwg.org/multipage/" class="btn btn-primary" target="_blank">公式ドキュメント</a>
-        </div>
+    <section id="skills" class="skills section">
+      <div class="section-heading section-grid reveal"><div class="section-kicker"><span>02</span><span>What I use</span></div><h2>つくるための<br><em>道具たち。</em></h2><p>好奇心を起点に、基礎から実装まで。<br>今も少しずつ、できることを増やしています。</p></div>
+      <div class="skill-list section-grid">
+        <article class="skill-card reveal"><span class="skill-index">01</span><div class="skill-icon icon-code">&lt;/&gt;</div><h3>Web basics</h3><p>HTML / CSS / JavaScript</p><span class="skill-detail">Structure, style &amp; interaction</span></article>
+        <article class="skill-card reveal delay-1"><span class="skill-index">02</span><div class="skill-icon icon-window">▦</div><h3>OS &amp; tools</h3><p>Windows / ChromeOS</p><span class="skill-detail">Everyday digital environment</span></article>
+        <article class="skill-card reveal delay-2"><span class="skill-index">03</span><div class="skill-icon icon-shape">◌</div><h3>Creative coding</h3><p>OpenProcessing</p><span class="skill-detail">Experiments in motion &amp; form</span></article>
       </div>
+    </section>
 
-      <div class="card" style="width: 18rem;">
-        <img src="css.png" alt="CSS" class="card-img-top">
-        <div class="card-body">
-          <h5 class="card-title">CSS</h5>
-          <p class="card-text">CSSはノリで覚えた。めんどくさいところは全部ChatGPT。</p>
-          <a href="https://sass-lang.com/documentation/" class="btn btn-primary" target="_blank">公式ドキュメント</a>
-        </div>
+    <section id="works" class="works section">
+      <div class="section-heading section-grid reveal"><div class="section-kicker"><span>03</span><span>Selected works</span></div><h2>つくったもの、<br><em>いろいろ。</em></h2><p>遊びながら学んだ、現在進行形の作品集です。</p></div>
+      <div class="work-grid">
+        <a class="work-card work-large reveal" href="https://namiyama-814.github.io/assessment/assessment.html" target="_blank" rel="noreferrer"><div class="work-image"><img src="あなたのいいところ診断.png" alt="あなたのいいところ診断の画面"><span class="work-number">01</span><span class="view-arrow">↗</span></div><div class="work-info"><div><h3>あなたのいいところ診断</h3><p>Interactive web experience</p></div><span class="work-year">2025</span></div></a>
+        <a class="work-card reveal delay-1" href="https://namiyama-814.github.io/timeguess/js-object.html" target="_blank" rel="noreferrer"><div class="work-image"><img src="時間あてゲーム.png" alt="時間あてゲームの画面"><span class="work-number">02</span><span class="view-arrow">↗</span></div><div class="work-info"><div><h3>時間あてゲーム</h3><p>JavaScript / Mini game</p></div><span class="work-year">2024</span></div></a>
+        <a class="work-card reveal delay-2" href="https://openprocessing.org/sketch/2844770" target="_blank" rel="noreferrer"><div class="work-image"><img src="オープンプロセッシング.png" alt="OpenProcessingの作品"><span class="work-number">03</span><span class="view-arrow">↗</span></div><div class="work-info"><div><h3>OpenProcessing</h3><p>Creative coding / Experiment</p></div><span class="work-year">2025</span></div></a>
       </div>
+    </section>
 
-      <div class="card" style="width: 18rem;">
-        <img src="js.png" alt="JavaScript" class="card-img-top">
-        <div class="card-body">
-          <h5 class="card-title">JavaScript</h5>
-          <p class="card-text">割と真面目に勉強した。大なりとか比較表現とかよくわからん。</p>
-          <a href="https://html.spec.whatwg.org/multipage/" class="btn btn-primary" target="_blank">公式ドキュメント</a>
-        </div>
-      </div>
+    <section class="credentials section section-grid">
+      <div class="section-kicker reveal"><span>04</span><span>Credentials</span></div>
+      <div class="credentials-content reveal delay-1"><h2>学びの記録も、<br><em>作品の一部。</em></h2><div class="credential-row"><img src="パソコン検定.png" alt="パソコン能力評価試験"><div><span>Computer skills assessment</span><h3>パソコン能力評価試験 4級</h3></div><span class="credential-year">2023</span></div><div class="credential-row"><img src="タイピング検定.png" alt="タイピング技能検定"><div><span>Typing skill test</span><h3>タイピング技能検定 8級</h3></div><span class="credential-year">2023</span></div></div>
+    </section>
 
-    </div>
-
-  </section>
-
-  <section class="cart">
-    <h3 style="text-align:center">Certifications</h3>
-
-    <div class="cart">
-
-      <div class="cart-card">
-
-        <div class="card" style="width: 18rem;">
-          <img src="パソコン検定.png" alt="パソコン能力評価試験" class="card-img-top">
-          <div class="card-body">
-            <h5 class="card-title">パソコン能力評価試験4級</h5>
-            <p class="card-text">中二で取得。無料だから取った。小学生でも取れる。ホームページがダサい<br>　</p>
-            <a href="https://www.opentests.com/" class="btn btn-primary" target="_blank">公式サイト</a>
-          </div>
-        </div>
-
-        <div class="card" style="width: 18rem;">
-          <img src="タイピング検定.png" alt="タイピング技能検定" class="card-img-top">
-          <div class="card-body">
-            <h5 class="card-title">タイピング技能検定8級</h5>
-            <p class="card-text">中二で取得。無料だから取った。認定料を払ってないからほんとは名乗ってはいけない</p>
-            <a href="https://web.e-typing.ne.jp/" class="btn btn-primary" target="_blank">公式サイト</a>
-          </div>
-        </div>
-
-      </div>
-
-  </section>
-
-  <section class="works">
-    <h2 style="text-align:center">Works</h2>
-
-    <div class="works-card">
-      <div class="card" style="width: 18rem;">
-        <img src="あなたのいいところ診断.png" alt="あなたのいいところ診断" class="card-img-top">
-        <div class="card-body">
-          <h5 class="card-title">あなたのいいところ診断</h5>
-          <p class="card-text">割と形になっていると思う。BootStrapは楽しい</p>
-          <a href="https://namiyama-814.github.io/assessment/assessment.html" class="btn btn-primary"
-            target="_blank">使ってみる</a>
-        </div>
-      </div>
-
-      <div class="card" style="width: 18rem;">
-        <img src="時間あてゲーム.png" alt="時間あてゲーム" class="card-img-top">
-        <div class="card-body">
-          <h5 class="card-title">時間あてゲーム</h5>
-          <p class="card-text">一番最初に作った作品。CSSを使ってないからUIは最低限</p>
-          <a href="https://namiyama-814.github.io/timeguess/js-object.html" class="btn btn-primary"
-            target="_blank">使ってみる</a>
-        </div>
-      </div>
-
-      <div class="card" style="width: 18rem;">
-        <img src="オープンプロセッシング.png" alt="Open Processing" class="card-img-top">
-        <div class="card-body">
-          <h5 class="card-title">Open Processing</h5>
-          <p class="card-text">クリエイティブコーディング。こういうア－ト的なのは好きじゃない</p>
-          <a href="https://openprocessing.org/sketch/2844770"
-            class="btn btn-primary" target="_blank">使ってみる</a>
-        </div>
-      </div>
-    </div>
-
-  </section>
-
+    <section id="contact" class="contact section-grid reveal"><p class="eyebrow">Have an idea?</p><h2>一緒に、<em>おもしろい</em><br>ものをつくろう。</h2><a class="contact-link" href="https://github.com/namiyama814" target="_blank" rel="noreferrer">GitHubでつながる <span>↗</span></a></section>
+  </main>
+  <footer class="site-footer"><span>© <span id="year"></span> namiyama</span><span>Built with curiosity.</span><a href="#top">Back to top ↑</a></footer>
+  <script src="script.js"></script>
 </body>
-
 </html>
