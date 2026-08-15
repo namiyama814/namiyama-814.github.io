@@ -57,6 +57,18 @@ function ArrowUpRightIcon({ className = 'h-3.5 w-3.5' }: { className?: string })
   return <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" className={className}><path d="M7 17 17 7M9 7h8v8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>;
 }
 
+function SparkIcon({ className = 'h-4 w-4' }: { className?: string }) {
+  return <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" className={className}><path d="m12 3 1.85 6.15L20 11l-6.15 1.85L12 19l-1.85-6.15L4 11l6.15-1.85L12 3Z" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg>;
+}
+
+function LayersIcon({ className = 'h-4 w-4' }: { className?: string }) {
+  return <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" className={className}><path d="m12 3 8 4.5-8 4.5-8-4.5L12 3Zm-8 9 8 4.5 8-4.5M4 16.5 12 21l8-4.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg>;
+}
+
+function CodeIcon({ className = 'h-4 w-4' }: { className?: string }) {
+  return <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" className={className}><path d="m8 8-4 4 4 4m8-8 4 4-4 4M14 5l-4 14" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg>;
+}
+
 export default function Home() {
   return (
     <main className="overflow-x-hidden bg-[#FAFAFA] text-[#252525]">
@@ -79,9 +91,10 @@ export default function Home() {
             <span>PORTFOLIO / 2026</span><span>JP</span>
           </div>
           <div className="py-16 lg:py-0">
-            <p className="mb-6 text-xs font-bold tracking-[0.17em]">DIGITAL CREATOR &amp; ENGINEER</p>
+            <div className="mb-6 flex items-center gap-3 text-xs font-bold tracking-[0.17em]"><SparkIcon className="h-3.5 w-3.5" />DIGITAL CREATOR &amp; ENGINEER</div>
             <h1 className="max-w-4xl text-[clamp(2.65rem,7vw,6.6rem)] font-black leading-[1.12] tracking-[-0.08em]">つくることを<br />もっと自由に</h1>
-            <p className="mt-8 max-w-xl text-sm font-medium leading-8 sm:text-base">Webとテクノロジーを軸に、人の行動を少し前へ進める体験を設計・実装しています。</p>
+            <p className="mt-8 max-w-xl text-sm font-medium leading-8 sm:text-base">Webサイトやツールを通じて、複雑なことを、わかりやすい体験へ変えていきます。</p>
+            <div className="mt-7 flex items-center gap-3 text-[10px] font-bold tracking-[0.14em]"><span className="h-px w-10 bg-[#252525]" />WEB / TOOLS / SYSTEMS</div>
           </div>
           <a href="#about" className="group inline-flex w-fit items-center gap-4 text-xs font-bold tracking-[0.12em]">SCROLL TO EXPLORE <span className="inline-grid h-8 w-8 place-items-center rounded-full border border-[#252525] transition-colors group-hover:bg-[#252525] group-hover:text-[#FAFAFA]"><ArrowDownIcon /></span></a>
         </div>
@@ -101,16 +114,18 @@ export default function Home() {
           <div className="border-b border-[#252525] px-5 py-6 sm:px-8 lg:col-span-3 lg:border-b-0 lg:border-r lg:px-10 lg:py-12"><SectionLabel number="01">ABOUT</SectionLabel></div>
           <div className="px-5 py-16 sm:px-8 lg:col-span-9 lg:px-10 lg:py-24">
             <div className="grid grid-cols-1 gap-10 md:grid-cols-[1fr_auto] md:items-end">
-              <p className="max-w-4xl text-[clamp(1.8rem,4vw,4rem)] font-black leading-[1.35] tracking-[-0.07em]">好奇心を起点に<br />誰かに届く仕組みを作る</p>
+              <div><p className="max-w-4xl text-[clamp(1.8rem,4vw,4rem)] font-black leading-[1.35] tracking-[-0.07em]">好奇心を起点に<br />誰かに届く仕組みを作る</p><p className="mt-7 max-w-2xl text-sm leading-8 sm:text-base">アイデアを形にするだけでなく、使う人が迷わず前に進めることまで考えて、設計と実装を行っています。</p></div>
               <figure className="m-0 w-32 sm:w-40">
                 <img src="avatar/source.png" alt="namiyamaのGitHubアバター" className="aspect-square w-full rounded-full border border-[#252525] object-cover" />
-                <figcaption className="mt-2 text-center text-[10px] font-bold tracking-[0.13em]">namiyama</figcaption>
+                <figcaption className="mt-3 text-center text-[10px] font-bold tracking-[0.13em]">namiyama</figcaption>
               </figure>
             </div>
-            <div className="mt-12 grid max-w-4xl grid-cols-1 gap-8 border-t border-[#252525] pt-6 text-sm leading-8 md:grid-cols-2">
-              <p className="m-0">namiyamaです。Web制作や開発を通して、情報を分かりやすく、使いやすく届けることに取り組んでいます。</p>
-              <p className="m-0">学生団体での制作・開発活動と、エンジニアインターンでの実務経験を往復しながら、技術とデザインの両面を磨いています。</p>
+            <div className="mt-12 grid max-w-4xl grid-cols-1 gap-px border-y border-[#252525] bg-[#252525] text-sm md:grid-cols-3">
+              <article className="bg-[#FAFAFA] p-5 sm:p-6"><SparkIcon /><h3 className="mt-7 text-sm font-black tracking-[-0.04em]">考える</h3><p className="mt-3 leading-7">複雑な情報や課題を整理し、必要な体験を見つけます。</p></article>
+              <article className="bg-[#FAFAFA] p-5 sm:p-6"><LayersIcon /><h3 className="mt-7 text-sm font-black tracking-[-0.04em]">設計する</h3><p className="mt-3 leading-7">目的と使う人をつなぐ、わかりやすい流れを組み立てます。</p></article>
+              <article className="bg-[#FAFAFA] p-5 sm:p-6"><CodeIcon /><h3 className="mt-7 text-sm font-black tracking-[-0.04em]">実装する</h3><p className="mt-3 leading-7">Webサイトやツールとして、実際に動く形まで落とし込みます。</p></article>
             </div>
+            <p className="mt-8 max-w-3xl text-sm leading-8">学生団体での制作・開発活動とエンジニアインターンを行き来しながら、技術とデザインの両面を磨いています。</p>
           </div>
         </div>
       </section>
