@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { works as workEntries } from './works-data';
 
 const skills = [
@@ -144,7 +145,7 @@ export default function Home() {
             <div className="mt-12 grid grid-cols-1 gap-px border-y border-[#252525] bg-[#252525] md:grid-cols-2">
               {workEntries.slice(0, 2).map((work, index) => <article key={work.name} className="flex min-h-[280px] flex-col bg-[#FAFAFA] p-5 sm:p-8 lg:p-10"><p className="text-[11px] font-medium tracking-[0.17em]">FEATURED / {String(index + 1).padStart(2, '0')}</p><h3 className="mt-10 text-2xl font-black tracking-[-0.06em]">{work.name}</h3><p className="mt-4 min-h-14 text-sm leading-7">{work.description}</p><ul className="mt-6 min-h-5 flex flex-wrap gap-x-4 gap-y-2 p-0 text-xs font-bold" aria-label={`${work.name}で使用した技術`}>{work.technologies.map((technology) => <li key={technology} className="list-none">{technology}</li>)}</ul><div className="mt-5 flex flex-wrap gap-5 border-t border-[#252525] pt-5 text-[10px] font-bold tracking-[0.12em]">{work.live && <a href={work.live} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 transition-opacity hover:opacity-60">LIVE <ArrowUpRightIcon /></a>}{work.code && <a href={work.code} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 transition-opacity hover:opacity-60">CODE <ArrowUpRightIcon /></a>}</div></article>)}
             </div>
-            <div className="px-5 pt-8 sm:px-8 lg:px-10"><a href="./works" className="inline-flex items-center gap-3 border-b border-[#252525] pb-1 text-xs font-bold tracking-[0.12em] transition-opacity hover:opacity-60">VIEW ALL {workEntries.length} WORKS <ArrowUpRightIcon className="h-4 w-4" /></a></div>
+            <div className="px-5 pt-8 sm:px-8 lg:px-10"><Link href="/works" className="inline-flex items-center gap-3 border-b border-[#252525] pb-1 text-xs font-bold tracking-[0.12em] transition-opacity hover:opacity-60">VIEW ALL {workEntries.length} WORKS <ArrowUpRightIcon className="h-4 w-4" /></Link></div>
           </div>
         </div>
       </section>
