@@ -114,16 +114,16 @@ export default function Home() {
           <div className="border-b border-[#252525] px-5 py-6 sm:px-8 lg:col-span-3 lg:border-b-0 lg:border-r lg:px-10 lg:py-12"><SectionLabel number="01">ABOUT</SectionLabel></div>
           <div className="px-5 py-16 sm:px-8 lg:col-span-9 lg:px-10 lg:py-24">
             <div className="grid grid-cols-1 gap-10 md:grid-cols-[1fr_auto] md:items-end">
-              <div><p className="max-w-4xl text-[clamp(1.8rem,4vw,4rem)] font-black leading-[1.35] tracking-[-0.07em]">好奇心を起点に<br />誰かに届く仕組みを作る</p><p className="mt-7 max-w-2xl text-sm leading-8 sm:text-base">アイデアを形にするだけでなく、使う人が迷わず前に進めることまで考えて、設計と実装を行っています。</p></div>
+              <div><p className="max-w-4xl text-[clamp(1.8rem,4vw,4rem)] font-black leading-[1.35] tracking-[-0.07em]">好奇心を起点に<br />誰かに届く仕組みを作る</p><p className="mt-7 max-w-2xl text-sm leading-8 sm:text-base">アイデアを形にするだけでなく、使う人が迷わず前に進めることまで考えて<br>設計と実装を行っています。</p></div>
               <figure className="m-0 w-32 sm:w-40">
                 <img src="avatar/source.png" alt="namiyamaのGitHubアバター" className="aspect-square w-full rounded-full border border-[#252525] object-cover" />
                 <figcaption className="mt-3 text-center text-[10px] font-bold tracking-[0.13em]">namiyama</figcaption>
               </figure>
             </div>
             <div className="mt-12 grid max-w-4xl grid-cols-1 gap-px border-y border-[#252525] bg-[#252525] text-sm md:grid-cols-3">
-              <article className="bg-[#FAFAFA] p-5 sm:p-6"><SparkIcon /><h3 className="mt-7 text-sm font-black tracking-[-0.04em]">考える</h3><p className="mt-3 leading-7">複雑な情報や課題を整理し、必要な体験を見つけます。</p></article>
-              <article className="bg-[#FAFAFA] p-5 sm:p-6"><LayersIcon /><h3 className="mt-7 text-sm font-black tracking-[-0.04em]">設計する</h3><p className="mt-3 leading-7">目的と使う人をつなぐ、わかりやすい流れを組み立てます。</p></article>
-              <article className="bg-[#FAFAFA] p-5 sm:p-6"><CodeIcon /><h3 className="mt-7 text-sm font-black tracking-[-0.04em]">実装する</h3><p className="mt-3 leading-7">Webサイトやツールとして、実際に動く形まで落とし込みます。</p></article>
+              <article className="bg-[#FAFAFA] p-5 sm:p-6"><SparkIcon /><h3 className="mt-7 text-sm font-black tracking-[-0.04em]">考える</h3><p className="mt-3 leading-7">複雑な情報や課題を整理し<br>必要な体験を見つけます。</p></article>
+              <article className="bg-[#FAFAFA] p-5 sm:p-6"><LayersIcon /><h3 className="mt-7 text-sm font-black tracking-[-0.04em]">設計する</h3><p className="mt-3 leading-7">目的と使う人をつなぐ<br>わかりやすい流れを組み立てます。</p></article>
+              <article className="bg-[#FAFAFA] p-5 sm:p-6"><CodeIcon /><h3 className="mt-7 text-sm font-black tracking-[-0.04em]">実装する</h3><p className="mt-3 leading-7">Webサイトやツールとして、<br>実際に動く形まで落とし込みます。</p></article>
             </div>
             <p className="mt-8 max-w-3xl text-sm leading-8">学生団体での制作・開発活動とエンジニアインターンを行き来しながら、技術とデザインの両面を磨いています。</p>
           </div>
