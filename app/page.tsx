@@ -15,6 +15,7 @@ const timeline = [
   { date: '2026.08', organization: '学生団体 CONNECTOR', role: 'サイト制作部門' },
   { date: '2026.08', organization: '学生団体 TSUGIHANDS', role: 'サイト制作部門・DX部門', href: 'https://tsugihands.org' },
   { date: '2026.08', organization: 'N高グループ生徒会', role: 'デジタル委員会' },
+  { date: '2028.08', organization: '学生団体 瑞鶴グループ', role: '代表' },
   { date: '2026.10', organization: 'ZEN大学', role: '特別聴講生', href: 'https://zen.ac.jp' },
 ];
 
