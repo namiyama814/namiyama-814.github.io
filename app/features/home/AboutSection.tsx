@@ -19,9 +19,9 @@ export function AboutSection({ copy }: AboutSectionProps) {
         <div className="px-5 py-16 sm:px-8 lg:col-span-9 lg:px-10 lg:py-24">
           <div className="grid grid-cols-1 gap-10 md:grid-cols-[1fr_auto] md:items-end">
             <div>
-              <p className="max-w-4xl text-[clamp(1.8rem,4vw,4rem)] font-black leading-[1.35] tracking-[-0.07em]">
+              <h2 className="max-w-4xl text-[clamp(1.8rem,4vw,4rem)] font-black leading-[1.35] tracking-[-0.07em]">
                 <TextLines lines={copy.aboutTitleLines} />
-              </p>
+              </h2>
               <p className="mt-7 max-w-2xl text-sm leading-8 sm:text-base">{copy.aboutLead}</p>
             </div>
             <figure className="m-0 w-32 sm:w-40">

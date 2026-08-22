@@ -60,7 +60,7 @@ export function SiteHeader({ locale, path }: SharedProps) {
             href={alternate}
             locale={alternateLocale(locale)}
             label={labels.switcher}
-            ariaLabel={labels.language}
+            ariaLabel={`${labels.switcher} — ${labels.language}`}
             className="border-b border-[#252525] pb-0.5 transition-opacity hover:opacity-60"
           />
           <a
