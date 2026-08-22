@@ -46,6 +46,14 @@ section[id] {
   scroll-margin-top: 4rem;
 }
 
+/* 外側の矩形ではなく下線で、リンクのキーボードフォーカスを示す。 */
+a:focus-visible {
+  outline: none;
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.35em;
+}
+
 /* 明るい背景では、選択範囲を黒地・白文字に反転する。 */
 ::selection {
   background: var(--ink);

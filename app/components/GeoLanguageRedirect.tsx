@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { preferenceKey } from './LanguagePreferenceLink';
 
 const geoAttemptKey = 'namiyama.geo-language-attempted';
-const countryEndpoint = 'https://api.country.is/';
+const countryEndpoint = process.env.NEXT_PUBLIC_COUNTRY_API_ENDPOINT || 'https://api.country.is/';
 
 function isJapaneseHomePage(pathname: string) {
   return pathname === '/' || pathname === '/index.html';
