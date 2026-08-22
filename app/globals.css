@@ -22,8 +22,8 @@ body {
 }
 
 ::selection {
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--paper);
+  color: var(--ink);
 }
 
 @media (prefers-reduced-motion: reduce) {

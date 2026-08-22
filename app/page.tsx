@@ -185,8 +185,29 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="contact" className="border-t border-[#252525] bg-[#252525] text-[#FAFAFA]">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 sm:border-x sm:border-[#FAFAFA] lg:grid-cols-12">
+          <div className="border-b border-[#FAFAFA] px-5 py-6 sm:px-8 lg:col-span-3 lg:border-b-0 lg:border-r lg:px-10 lg:py-12"><SectionLabel number="07">CONTACT</SectionLabel></div>
+          <div className="lg:col-span-9">
+            <div className="px-5 py-14 sm:px-8 lg:px-10 lg:py-20">
+              <h2 className="text-[clamp(2rem,4.2vw,4.5rem)] font-black leading-[1.2] tracking-[-0.07em]">お問い合わせ</h2>
+              <p className="mt-5 max-w-xl text-sm leading-8">制作や開発についてのご相談、質問など、お気軽にご連絡ください。</p>
+            </div>
+            <form action="https://formspree.io/f/xgawlzep" method="POST" className="border-t border-[#FAFAFA] px-5 py-10 sm:px-8 lg:px-10 lg:py-14">
+              <input type="hidden" name="_subject" value="ポートフォリオサイトからのお問い合わせ" />
+              <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+                <label className="flex flex-col gap-3 text-xs font-bold tracking-[0.08em]">お名前<span className="sr-only">（必須）</span><input type="text" name="name" required autoComplete="name" placeholder="お名前" className="border-b border-[#FAFAFA] bg-transparent px-0 py-3 text-sm font-medium tracking-normal text-[#FAFAFA] outline-none placeholder:text-[#FAFAFA]/60 focus:border-[#FAFAFA]" /></label>
+                <label className="flex flex-col gap-3 text-xs font-bold tracking-[0.08em]">メールアドレス<span className="sr-only">（必須）</span><input type="email" name="email" required autoComplete="email" placeholder="you@example.com" className="border-b border-[#FAFAFA] bg-transparent px-0 py-3 text-sm font-medium tracking-normal text-[#FAFAFA] outline-none placeholder:text-[#FAFAFA]/60 focus:border-[#FAFAFA]" /></label>
+              </div>
+              <label className="mt-8 flex flex-col gap-3 text-xs font-bold tracking-[0.08em]">お問い合わせ内容<span className="sr-only">（必須）</span><textarea name="message" required rows={6} placeholder="お問い合わせ内容をご入力ください" className="resize-y border-b border-[#FAFAFA] bg-transparent px-0 py-3 text-sm font-medium leading-7 tracking-normal text-[#FAFAFA] outline-none placeholder:text-[#FAFAFA]/60 focus:border-[#FAFAFA]" /></label>
+              <button type="submit" className="mt-8 inline-flex items-center gap-3 border-b border-[#FAFAFA] pb-1 text-xs font-bold tracking-[0.12em] transition-opacity hover:opacity-60">送信する <ArrowUpRightIcon /></button>
+            </form>
+          </div>
+        </div>
+      </section>
+
       <footer className="bg-[#FAFAFA] text-[#252525]">
-        <div className="mx-auto flex max-w-7xl flex-col gap-10 px-5 py-14 sm:border-x sm:border-[#252525] sm:px-8 lg:px-10 lg:py-20"><p className="max-w-4xl text-[clamp(2rem,5vw,5rem)] font-black leading-[1.2] tracking-[-0.07em]">新しいアイデアを<br />新しい形に</p><div className="flex flex-wrap items-center justify-between gap-5 border-t border-[#252525] pt-5 text-[10px] font-bold tracking-[0.13em]"><span>© 2026 namiyama</span><a href="https://github.com/namiyama814" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 border-b border-[#252525] pb-0.5 transition-opacity hover:opacity-60">GITHUB <ArrowUpRightIcon /></a></div></div>
+        <div className="mx-auto flex max-w-7xl flex-col gap-10 px-5 py-14 sm:border-x sm:border-[#252525] sm:px-8 lg:px-10 lg:py-20"><p className="max-w-4xl text-[clamp(2rem,5vw,5rem)] font-black leading-[1.2] tracking-[-0.07em]">新しいアイデアを<br />新しい形に</p><div className="flex flex-wrap items-center justify-between gap-5 border-t border-[#252525] pt-5 text-[10px] font-bold tracking-[0.13em]"><span>© 2026 namiyama</span>            <div className="flex flex-wrap items-center gap-5"><a href="#contact" className="inline-flex items-center gap-1.5 border-b border-[#252525] pb-0.5 transition-opacity hover:opacity-60">CONTACT <ArrowUpRightIcon /></a><a href="https://github.com/namiyama814" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 border-b border-[#252525] pb-0.5 transition-opacity hover:opacity-60">GITHUB <ArrowUpRightIcon /></a></div></div></div>
       </footer>
     </main>
   );
