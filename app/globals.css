@@ -3,8 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --paper: #FAFAFA;
+  --paper: #fafafa;
   --ink: #252525;
+  --rule: #252525;
+  --rule-on-dark: #fafafa;
 }
 
 * {
@@ -13,12 +15,31 @@
 
 html {
   scroll-behavior: smooth;
+  background: var(--paper);
 }
 
 body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+svg {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
 }
 
 /* 明るい背景では、選択範囲を黒地・白文字に反転する。 */
@@ -49,8 +70,25 @@ body {
   text-shadow: none;
 }
 
+/* 各セクションは終端側だけに罫線を持つ。隣接する罫線の重なりを避ける。 */
+.section-frame {
+  border-color: var(--rule);
+}
+
+.selection-on-dark.section-frame {
+  border-color: var(--rule-on-dark);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }
