@@ -21,9 +21,32 @@ body {
   color: var(--ink);
 }
 
+/* 明るい背景では、選択範囲を黒地・白文字に反転する。 */
 ::selection {
+  background: var(--ink);
+  color: var(--paper);
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background: var(--ink);
+  color: var(--paper);
+  text-shadow: none;
+}
+
+/* 暗い背景では、選択範囲を白地・黒文字に反転する。 */
+.selection-on-dark::selection,
+.selection-on-dark *::selection {
   background: var(--paper);
   color: var(--ink);
+  text-shadow: none;
+}
+
+.selection-on-dark::-moz-selection,
+.selection-on-dark *::-moz-selection {
+  background: var(--paper);
+  color: var(--ink);
+  text-shadow: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
