@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { CurrentYear } from './CurrentYear';
+import { LanguagePreferenceLink } from './LanguagePreferenceLink';
 
 export type Locale = 'ja' | 'en';
 
@@ -22,9 +23,8 @@ function localizedPath(locale: Locale, path: SharedProps['path']) {
 
 function routes(locale: Locale, path: SharedProps['path']) {
   const home = localizedPath(locale, '/');
-  const current = localizedPath(locale, path);
   const alternate = localizedPath(locale === 'en' ? 'ja' : 'en', path);
-  return { home, current, alternate };
+  return { home, alternate };
 }
 
 export function SiteHeader({ locale, path }: SharedProps) {
@@ -34,7 +34,7 @@ export function SiteHeader({ locale, path }: SharedProps) {
     : { contact: 'CONTACT', switcher: 'EN', language: 'Switch to English' };
 
   return (
-    <header className="sticky top-0 z-20 border-b border-[#252525] bg-[#FAFAFA]">
+    <header className="fixed inset-x-0 top-0 z-30 border-b border-[#252525] bg-[#FAFAFA]">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-5 sm:px-8 lg:px-10">
         <Link href={home} className="shrink-0 text-lg font-black tracking-[-0.08em]">namiyama<span className="ml-0.5">.</span></Link>
         <nav aria-label={locale === 'en' ? 'Main navigation' : 'メインナビゲーション'} className="hidden items-center gap-5 text-[10px] font-bold tracking-[0.12em] md:flex">
@@ -45,7 +45,7 @@ export function SiteHeader({ locale, path }: SharedProps) {
           <Link href={localizedPath(locale, '/contact')} className="transition-opacity hover:opacity-60">{labels.contact}</Link>
         </nav>
         <div className="flex shrink-0 items-center gap-4 text-[10px] font-bold tracking-[0.12em]">
-          <Link href={alternate} aria-label={labels.language} className="border-b border-[#252525] pb-0.5 transition-opacity hover:opacity-60">{labels.switcher}</Link>
+          <LanguagePreferenceLink href={alternate} locale={locale === 'en' ? 'ja' : 'en'} label={labels.switcher} ariaLabel={labels.language} className="border-b border-[#252525] pb-0.5 transition-opacity hover:opacity-60" />
           <a href="https://github.com/namiyama814" target="_blank" rel="noreferrer" className="hidden items-center gap-1.5 border-b border-[#252525] pb-0.5 transition-opacity hover:opacity-60 sm:inline-flex">GITHUB <ArrowUpRightIcon /></a>
         </div>
       </div>
@@ -53,8 +53,7 @@ export function SiteHeader({ locale, path }: SharedProps) {
   );
 }
 
-export function SiteFooter({ locale, path }: SharedProps) {
-  const { home } = routes(locale, path);
+export function SiteFooter({ locale }: SharedProps) {
   const labels = locale === 'en'
     ? { statement: <>New ideas<br />in new forms</>, contact: 'CONTACT' }
     : { statement: <>新しいアイデアを<br />新しい形に</>, contact: 'CONTACT' };

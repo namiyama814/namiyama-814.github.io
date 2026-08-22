@@ -1,4 +1,5 @@
-import { Locale, SiteFooter, SiteHeader } from './SiteChrome';
+import { PageFrame } from './PageFrame';
+import { Locale } from './SiteChrome';
 
 const copy = {
   ja: {
@@ -35,8 +36,7 @@ export function ContactPage({ locale }: { locale: Locale }) {
   const t = copy[locale];
 
   return (
-    <main lang={locale} className="flex min-h-screen flex-col bg-[#FAFAFA] text-[#252525]">
-      <SiteHeader locale={locale} path="/contact" />
+    <PageFrame locale={locale} path="/contact" className="flex flex-col">
       <section className="section-frame border-b border-[#252525]">
         <div className="mx-auto grid max-w-7xl grid-cols-1 sm:border-x sm:border-[#252525] lg:grid-cols-12">
           <div className="border-b border-[#252525] px-5 py-6 sm:px-8 lg:col-span-3 lg:border-b-0 lg:border-r lg:px-10 lg:py-12"><p className="m-0 text-[11px] font-medium tracking-[0.18em]">07 / CONTACT</p></div>
@@ -57,7 +57,6 @@ export function ContactPage({ locale }: { locale: Locale }) {
           </form>
         </div>
       </section>
-      <SiteFooter locale={locale} path="/contact" />
-    </main>
+    </PageFrame>
   );
 }

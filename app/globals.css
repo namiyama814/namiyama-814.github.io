@@ -42,6 +42,10 @@ textarea {
   font: inherit;
 }
 
+section[id] {
+  scroll-margin-top: 4rem;
+}
+
 /* 明るい背景では、選択範囲を黒地・白文字に反転する。 */
 ::selection {
   background: var(--ink);

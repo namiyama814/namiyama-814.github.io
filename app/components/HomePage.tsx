@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import { works as workEntries } from '../works-data';
-import { ArrowUpRightIcon, Locale, SiteFooter, SiteHeader } from './SiteChrome';
+import { PageFrame } from './PageFrame';
+import { ArrowUpRightIcon, Locale } from './SiteChrome';
 
 const skills = [
   { id: '01', title: { ja: 'プログラミング言語', en: 'Languages' }, items: ['HTML', 'CSS', 'JavaScript', 'Pug', 'Python'] },
-  { id: '02', title: { ja: 'フレームワーク', en: 'Frameworks' }, items: ['Node.js', 'Next.js', 'React', 'Bootstrap', 'Tailwind CSS'] },
+  { id: '02', title: { ja: 'フレームワーク', en: 'Frameworks' }, items: ['Node.js', 'Next.js', 'React', 'Hono', 'Bootstrap', 'Tailwind CSS'] },
   { id: '03', title: { ja: 'ツール', en: 'Tools' }, items: ['Docker', 'Git', 'GitHub', 'Codex', 'Claude Code', 'Cloudflare'] },
   { id: '04', title: { ja: 'OS', en: 'Operating systems' }, items: ['Windows', 'macOS', 'Linux'] },
 ];
@@ -108,8 +109,7 @@ export function HomePage({ locale }: { locale: Locale }) {
   const worksHref = locale === 'en' ? '/en/works' : '/works';
 
   return (
-    <main id="top" lang={locale} className="overflow-x-hidden bg-[#FAFAFA] text-[#252525]">
-      <SiteHeader locale={locale} path="/" />
+    <PageFrame locale={locale} path="/" id="top" className="overflow-x-hidden" autoDetectLocale>
 
       <section className="section-frame mx-auto grid min-h-[calc(100svh-4rem)] border-b max-w-7xl grid-cols-1 border-x-0 border-[#252525] sm:border-x lg:grid-cols-12">
         <div className="flex flex-col justify-between px-5 py-8 sm:px-8 sm:py-10 lg:col-span-8 lg:border-r lg:border-[#252525] lg:px-10 lg:py-12">
@@ -192,7 +192,6 @@ export function HomePage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <SiteFooter locale={locale} path="/" />
-    </main>
+    </PageFrame>
   );
 }
