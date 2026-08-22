@@ -1,5 +1,5 @@
 import { PageFrame } from './PageFrame';
-import { Locale } from './SiteChrome';
+import type { Locale } from '../lib/i18n';
 
 const copy = {
   ja: {

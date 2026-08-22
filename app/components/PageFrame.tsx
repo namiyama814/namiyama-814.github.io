@@ -1,10 +1,11 @@
 import type { ReactNode } from 'react';
 import { GeoLanguageRedirect } from './GeoLanguageRedirect';
-import { Locale, SiteFooter, SiteHeader } from './SiteChrome';
+import type { Locale, LocalizedPath } from '../lib/i18n';
+import { SiteFooter, SiteHeader } from './SiteChrome';
 
 type PageFrameProps = {
   locale: Locale;
-  path: '/' | '/works' | '/contact';
+  path: LocalizedPath;
   children: ReactNode;
   className?: string;
   id?: string;

@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import type { ReactNode } from 'react';
-import type { Locale } from './SiteChrome';
+import type { Locale } from '../lib/i18n';
 
 type LanguagePreferenceLinkProps = {
   href: string;

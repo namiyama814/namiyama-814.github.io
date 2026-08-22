@@ -1,6 +1,7 @@
 import { works } from '../works-data';
 import { PageFrame } from './PageFrame';
-import { ArrowUpRightIcon, Locale } from './SiteChrome';
+import { ArrowUpRightIcon } from './icons/ArrowUpRightIcon';
+import type { Locale } from '../lib/i18n';
 
 const copy = {
   ja: {
