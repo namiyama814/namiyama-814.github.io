@@ -14,7 +14,13 @@ type LanguagePreferenceLinkProps = {
 
 const preferenceKey = 'namiyama.locale-preference';
 
-export function LanguagePreferenceLink({ href, locale, label, ariaLabel, className }: LanguagePreferenceLinkProps) {
+export function LanguagePreferenceLink({
+  href,
+  locale,
+  label,
+  ariaLabel,
+  className,
+}: LanguagePreferenceLinkProps) {
   return (
     <Link
       href={href}

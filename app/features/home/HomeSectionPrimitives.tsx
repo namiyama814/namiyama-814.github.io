@@ -6,7 +6,11 @@ type SectionLabelProps = {
 };
 
 export function SectionLabel({ number, children }: SectionLabelProps) {
-  return <p className="m-0 font-sans text-[11px] font-medium tracking-[0.18em]">{number} / {children}</p>;
+  return (
+    <p className="m-0 font-sans text-[11px] font-medium tracking-[0.18em]">
+      {number} / {children}
+    </p>
+  );
 }
 
 export function TextLines({ lines }: { lines: readonly string[] }) {

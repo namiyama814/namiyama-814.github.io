@@ -26,7 +26,8 @@ export const works: Work[] = [
   {
     name: 'GovSparkBot',
     description: 'Discord VCの録音、所属メンバーのタスク割り振りと管理を行うDiscord Bot',
-    descriptionEn: 'A Discord bot for recording voice channels and assigning and managing tasks for members.',
+    descriptionEn:
+      'A Discord bot for recording voice channels and assigning and managing tasks for members.',
     technologies: ['TypeScript', 'Discord.js', 'Cloudflare', 'Render'],
     code: 'https://github.com/GovSpark/GovSparkDiscord',
   },

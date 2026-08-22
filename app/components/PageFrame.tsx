@@ -12,9 +12,20 @@ type PageFrameProps = {
   autoDetectLocale?: boolean;
 };
 
-export function PageFrame({ locale, path, children, className = '', id, autoDetectLocale = false }: PageFrameProps) {
+export function PageFrame({
+  locale,
+  path,
+  children,
+  className = '',
+  id,
+  autoDetectLocale = false,
+}: PageFrameProps) {
   return (
-    <main id={id} lang={locale} className={`min-h-screen bg-[#FAFAFA] pt-16 text-[#252525] ${className}`}>
+    <main
+      id={id}
+      lang={locale}
+      className={`min-h-screen bg-[#FAFAFA] pt-16 text-[#252525] ${className}`}
+    >
       {autoDetectLocale && locale === 'ja' && <GeoLanguageRedirect />}
       <SiteHeader locale={locale} path={path} />
       {children}
